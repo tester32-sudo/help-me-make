@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
 export default function App() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-[#1e0033] text-white">
       {/* Floating Oval Header */}
@@ -20,8 +22,8 @@ export default function App() {
 
         {/* Login / Signup */}
         <div className="space-x-4">
-          <button className="text-sm font-medium hover:text-purple-700 transition-colors">Login</button>
-          <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-800 transition-colors">
+          <button className="text-sm font-medium hover:text-purple-700 transition-colors" onClick={() => navigate('/login')}>Login</button>
+          <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-800 transition-colors" onClick={() => navigate('/login')}>
             Sign Up
           </button>
         </div>
