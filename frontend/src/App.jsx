@@ -1,7 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
 
 export default function App() {
   return (
@@ -35,6 +34,43 @@ export default function App() {
           <p className="text-lg md:text-xl text-purple-200 max-w-2xl mx-auto">
             Hire skilled mentors to guide you in building your dream projects. From coding to design, we’ve got you covered.
           </p>
+        </section>
+
+        {/* How it Works Section */}
+        <section id="how-it-works" className="mt-20">
+          <h2 className="text-3xl font-bold mb-10 text-center text-white">How it Works</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+            {/* Card 1 */}
+            <div className="bg-white/10 rounded-2xl p-6 shadow-lg flex flex-col items-center">
+              <span className="text-4xl mb-4">📝</span>
+              <h3 className="text-xl font-semibold mb-2">Add Skillset & Domain</h3>
+              <p className="text-purple-100">Tell us your current skills and the domain you want to build your project in.</p>
+            </div>
+            {/* Card 2 */}
+            <div className="bg-white/10 rounded-2xl p-6 shadow-lg flex flex-col items-center">
+              <span className="text-4xl mb-4">🤖</span>
+              <h3 className="text-xl font-semibold mb-2">AI Matches Mentors</h3>
+              <p className="text-purple-100">Our AI filters and suggests the best mentor profiles for your needs.</p>
+            </div>
+            {/* Card 3 */}
+            <div className="bg-white/10 rounded-2xl p-6 shadow-lg flex flex-col items-center">
+              <span className="text-4xl mb-4">💳</span>
+              <h3 className="text-xl font-semibold mb-2">Pick & Pay for Mentor</h3>
+              <p className="text-purple-100">Choose your mentor and securely pay to start your journey.</p>
+            </div>
+            {/* Card 4 */}
+            <div className="bg-white/10 rounded-2xl p-6 shadow-lg flex flex-col items-center">
+              <span className="text-4xl mb-4">💬</span>
+              <h3 className="text-xl font-semibold mb-2">Communication & Reminders</h3>
+              <p className="text-purple-100">Get a private room for chat and daily reminders to keep you on track.</p>
+            </div>
+            {/* Card 5 */}
+            <div className="bg-white/10 rounded-2xl p-6 shadow-lg flex flex-col items-center">
+              <span className="text-4xl mb-4">🛡️</span>
+              <h3 className="text-xl font-semibold mb-2">Security & Scrutiny</h3>
+              <p className="text-purple-100">We ensure fairness and security, protecting both mentors and learners from cheating.</p>
+            </div>
+          </div>
         </section>
         <div className="h-[200vh]" /> {/* Simulate scrolling */}
       </main>
