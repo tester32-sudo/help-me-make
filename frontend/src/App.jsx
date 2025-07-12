@@ -6,14 +6,14 @@ import viteLogo from "/vite.svg";
 export default function App() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-[#1e0033] text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Floating Oval Header */}
-      <header className="fixed top-4 left-1/2 -translate-x-1/2 bg-white text-black rounded-full shadow-lg px-6 py-3 flex items-center justify-between w-[90%] max-w-5xl z-50">
+      <header className="fixed top-4 left-1/2 -translate-x-1/2 text-black rounded-full shadow-lg px-6 py-3 flex items-center justify-between w-[90%] max-w-5xl z-50">
         {/* Logo */}
-        <div className="text-xl font-bold">HelpMeMake</div>
+        <div className="text-xl font-bold text-white">HelpMeMake</div>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 text-white">
           <a href="#how-it-works" className="hover:text-purple-700 transition-colors">How it Works</a>
           <a href="#mentors" className="hover:text-purple-700 transition-colors">Find Mentors</a>
           <a href="#projects" className="hover:text-purple-700 transition-colors">Projects</a>
@@ -22,7 +22,7 @@ export default function App() {
 
         {/* Login / Signup */}
         <div className="space-x-4">
-          <button className="text-sm font-medium hover:text-purple-700 transition-colors" onClick={() => navigate('/login')}>
+          <button className="text-sm font-medium text-white hover:text-purple-700 transition-colors" onClick={() => navigate('/login')}>
             Login
             </button>
           <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-800 transition-colors" onClick={() => navigate('/signup')}>
