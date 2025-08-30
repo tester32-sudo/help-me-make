@@ -21,7 +21,7 @@ export default function Login() {
     } else if (form.username === "mentor" && form.password === "123") {
       navigate("/mentordashboard");
     } else if (form.username === "admin" && form.password === "123") {
-      window.open("https://help-me-make.vercel.app/", "_blank"); // opens in new tab
+      navigate("/questions"); // opens in new tab
     } else {
       setError("Invalid username or password");
     }
