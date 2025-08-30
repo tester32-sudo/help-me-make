@@ -38,7 +38,6 @@ export default function Question() {
   const [showFixedMessage, setShowFixedMessage] = useState(false);
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [isNoButtonMoving, setIsNoButtonMoving] = useState(false);
-  const [showSkipButton, setShowSkipButton] = useState(false); // remove
   const [showPasswordInput, setShowPasswordInput] = useState(false);
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState(false);
@@ -150,7 +149,6 @@ export default function Question() {
           clearInterval(typing);
           setTimeout(() => {
             setShowOptions(true);
-            setShowSkipButton(true); // remove
           }, 1000);
         }
       }, 50);
@@ -296,12 +294,6 @@ export default function Question() {
       setTimeout(() => setPasswordError(false), 3000);
     }
   };
-
-  const handleSkipToStep7 = () => {
-    setShowOptions(false);
-    setShowSkipButton(false);
-    fadeAndTransition(7, "Are you gay?");
-  }; //remove
 
   const handleFormRequest = (choice) => {
     setShowOptions(false);
@@ -742,16 +734,6 @@ export default function Question() {
                 >
                   👍 Nice
                 </button>
-
-                {/* ADD THIS SKIP BUTTON HERE */}
-                {showSkipButton && (
-                  <button
-                    onClick={handleSkipToStep7}
-                    className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 block w-full max-w-sm mx-auto transform hover:shadow-xl border-2 border-yellow-400 animate-pulse"
-                  >
-                    ⚡ Skip to the Fun Part ⚡
-                  </button>
-                )}
               </div>
             )}
           </>
